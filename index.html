@@ -1,71 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>하나행성 입국 심사소</title>
-
-<style>
-body{
-    font-family:sans-serif;
-    background:#f3f4f6;
-    margin:0;
-    padding:20px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    max-width:700px;
-    margin:auto;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-h1{
-    text-align:center;
-}
-
-.btn{
-    display:block;
-    text-align:center;
-    background:#2563eb;
-    color:white;
-    padding:15px;
-    border-radius:10px;
-    text-decoration:none;
-    margin-top:20px;
-    font-weight:bold;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입국하기 | 오스켓트리아 제국</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #000;
+      color: #ddd;
+      overflow-x: hidden;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), 
+                  url('https://images.unsplash.com/photo-1462331940025-5ec7d0c9c5e3?w=1920') center/cover no-repeat fixed;
+      min-height: 100vh;
+    }
+    .star-wars-font {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .neon-text {
+      text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff;
+    }
+    .section {
+      background: rgba(15, 23, 42, 0.95);
+    }
+    .twinkle {
+      animation: twinkle 4s infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="card">
+  <!-- Hero -->
+  <section class="hero flex items-center justify-center text-center relative">
+    <div class="max-w-4xl px-6 z-10">
+      <h1 class="text-7xl md:text-8xl font-bold star-wars-font neon-text mb-4 tracking-widest">
+        입국하기
+      </h1>
+      <p class="text-2xl md:text-3xl text-cyan-300 mb-12">OSKETTRIA IMPERIUM & ELEMENT REPUBLIC</p>
+      
+      <div class="space-x-6">
+        <a href="#osket" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xl px-10 py-4 rounded-lg transition transform hover:scale-105">
+          오스켓트리아 제국
+        </a>
+        <a href="#element" class="inline-block bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white font-bold text-xl px-10 py-4 rounded-lg transition transform hover:scale-105">
+          원소 공화국
+        </a>
+      </div>
+    </div>
+  </section>
 
-<h1>🛂 하나행성 입국 심사소</h1>
+  <!-- 오스켓트리아 제국 -->
+  <section id="osket" class="section py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold star-wars-font text-cyan-400 mb-8">오스켓트리아 제국 입국하기</h2>
+      <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-12">
+        안녕하십니까. 이 서버는 오스켓트리아 제국과 지구의 외교를 위하여 만들어졌습니다.<br>
+        그럼 아래 버튼을 눌러 입국해주십시요.
+      </p>
+      <a href="https://aztra.xyz/invite/PkzInFiY" target="_blank"
+         class="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-2xl px-16 py-6 rounded-xl transition-all hover:scale-110 shadow-lg shadow-cyan-500/50">
+        🚀 제국 입국하기
+      </a>
+    </div>
+  </section>
 
-<p>
-환영합니다! 지구인들을 위한 입국 심사소입니다.
-</p>
+  <!-- 원소 공화국 -->
+  <section id="element" class="section py-24 bg-gradient-to-b from-slate-950 to-red-950/40">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold star-wars-font text-orange-400 mb-8">원소 공화국 입국하기</h2>
+      <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-12">
+        안녕하세요. 전쟁 역사가 제일 많은.. 원소 공화국입니다.<br>
+        지금 입국해주세요\~
+      </p>
+      <a href="https://discord.gg/rjvfzYw3R" target="_blank"
+         class="inline-block bg-orange-600 hover:bg-orange-500 text-white font-bold text-2xl px-16 py-6 rounded-xl transition-all hover:scale-110 shadow-lg shadow-orange-500/50">
+        🔥 공화국 입국하기
+      </a>
+    </div>
+  </section>
 
-<p>
-현재 가입 가능한 국가는 <b>Ouscetria 제국</b>뿐입니다.
-</p>
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center text-sm text-gray-500">
+    <p>© 2026 Oskettria Imperium & Element Republic • All Rights Reserved in the Galaxy</p>
+  </footer>
 
-<p>
-하나행성과 문화 교류를 원하시면 아래 버튼을 눌러주세요.
-</p>
-
-<a class="btn"
-href="https://aztra.xyz/invite/PkzInFiY"
-target="_blank">
-🚀 입국 심사 하기
-</a>
-
-</div>
-
+  <script>
+    // 별 효과
+    function createStar() {
+      const star = document.createElement('div');
+      star.className = 'absolute w-[2px] h-[2px] bg-white rounded-full twinkle';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.opacity = Math.random() * 0.7 + 0.3;
+      document.body.appendChild(star);
+      setTimeout(() => star.remove(), 12000);
+    }
+    setInterval(createStar, 60);
+  </script>
 </body>
 </html>
