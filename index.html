@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>입국하기 | 오스켓트리아 제국</title>
+  <title>입국하기 | 오스켓트리아 외교제국</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -27,12 +27,16 @@
     .section {
       background: rgba(15, 23, 42, 0.95);
     }
-    .twinkle {
-      animation: twinkle 4s infinite alternate;
+
+    /* 스크롤 애니메이션 */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-    @keyframes twinkle {
-      0% { opacity: 0.4; }
-      100% { opacity: 1; }
+    .fade-in-section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -41,69 +45,79 @@
   <!-- Hero -->
   <section class="hero flex items-center justify-center text-center relative">
     <div class="max-w-4xl px-6 z-10">
-      <h1 class="text-7xl md:text-8xl font-bold star-wars-font neon-text mb-4 tracking-widest">
-        입국하기
+      <h1 class="text-6xl md:text-7xl font-bold star-wars-font neon-text mb-4 tracking-widest">
+        OUSCETRIA EMPIRE
       </h1>
-      <p class="text-2xl md:text-3xl text-cyan-300 mb-12">OSKETTRIA IMPERIUM & ELEMENT REPUBLIC</p>
+      <p class="text-3xl text-cyan-300 mb-12">오스켓트리아 외교제국 수립</p>
       
-      <div class="space-x-6">
-        <a href="#osket" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xl px-10 py-4 rounded-lg transition transform hover:scale-105">
-          오스켓트리아 제국
-        </a>
-        <a href="#element" class="inline-block bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white font-bold text-xl px-10 py-4 rounded-lg transition transform hover:scale-105">
-          원소 공화국
+      <a href="#osket" 
+         class="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xl px-12 py-5 rounded-lg transition transform hover:scale-105">
+        제국 이야기 보기
+      </a>
+    </div>
+  </section>
+
+  <!-- 오스켓트리아 제국 -->
+  <section id="osket" class="section py-24 fade-in-section">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-5xl font-bold star-wars-font text-cyan-400 mb-10 text-center">오스켓트리아 외교제국 수립</h2>
+      
+      <div class="prose prose-invert max-w-none text-lg leading-relaxed space-y-6 mx-auto">
+        <p>하나 행성의 강대국, 오스켓트리아 제국은 모든 것이 관리 아래에 놓인 듯 했습니다.</p>
+        <p>하지만 다른 행성들은 제국의 처하에 놓인 것은 아니었습니다.</p>
+        <p>결국 오스켓트리아 정부는 지구와의 외교를 위하여 <strong>“프로젝트 어스”</strong>를 개설하고,<br>
+           오스트리아와 오스트레일리아를 거점으로 <strong>“오스켓트리아 외교제국”</strong>을 건설합니다.</p>
+        <p>그러나 이 정도로 지구와의 교류는 부족했습니다.</p>
+        <p>결국 인터넷이라는 새로운 정착지에서 오스켓트리아 문화를 퍼트리기로 결정했습니다.</p>
+        <p class="text-cyan-300 font-semibold pt-4">이것이 오스켓트리아 외교제국 인터넷 플랫폼의 시작입니다.</p>
+      </div>
+
+      <div class="text-center mt-16">
+        <a href="https://aztra.xyz/invite/PkzInFiY" target="_blank"
+           class="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-2xl px-16 py-6 rounded-xl transition-all hover:scale-110 shadow-lg shadow-cyan-500/50">
+          🚀 제국 입국하기
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 오스켓트리아 제국 -->
-  <section id="osket" class="section py-24">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold star-wars-font text-cyan-400 mb-8">오스켓트리아 제국 입국하기</h2>
-      <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-12">
-        안녕하십니까. 이 서버는 오스켓트리아 제국과 지구의 외교를 위하여 만들어졌습니다.<br>
-        그럼 아래 버튼을 눌러 입국해주십시요.
-      </p>
-      <a href="https://aztra.xyz/invite/PkzInFiY" target="_blank"
-         class="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-2xl px-16 py-6 rounded-xl transition-all hover:scale-110 shadow-lg shadow-cyan-500/50">
-        🚀 제국 입국하기
-      </a>
-    </div>
-  </section>
-
-  <!-- 원소 공화국 -->
-  <section id="element" class="section py-24 bg-gradient-to-b from-slate-950 to-red-950/40">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold star-wars-font text-orange-400 mb-8">원소 공화국 입국하기</h2>
-      <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-12">
-        안녕하세요. 전쟁 역사가 제일 많은.. 원소 공화국입니다.<br>
-        지금 입국해주세요\~
-      </p>
-      <a href="https://discord.gg/rjvfzYw3R" target="_blank"
-         class="inline-block bg-orange-600 hover:bg-orange-500 text-white font-bold text-2xl px-16 py-6 rounded-xl transition-all hover:scale-110 shadow-lg shadow-orange-500/50">
-        🔥 공화국 입국하기
-      </a>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="bg-black py-12 text-center text-sm text-gray-500">
-    <p>© 2026 Oskettria Imperium & Element Republic • All Rights Reserved in the Galaxy</p>
+  <footer class="bg-black py-12 text-center text-sm text-gray-500 fade-in-section">
+    <p>© 2026 Ouscetria Empire • All Rights Reserved in the Galaxy</p>
   </footer>
 
   <script>
     // 별 효과
     function createStar() {
       const star = document.createElement('div');
-      star.className = 'absolute w-[2px] h-[2px] bg-white rounded-full twinkle';
+      star.className = 'absolute w-[2px] h-[2px] bg-white rounded-full';
       star.style.left = Math.random() * 100 + 'vw';
       star.style.top = Math.random() * 100 + 'vh';
-      star.style.opacity = Math.random() * 0.7 + 0.3;
+      star.style.opacity = Math.random() * 0.8 + 0.2;
+      star.style.animation = 'twinkle 3s infinite alternate';
       document.body.appendChild(star);
-      setTimeout(() => star.remove(), 12000);
+      setTimeout(() => star.remove(), 15000);
     }
-    setInterval(createStar, 60);
+    setInterval(createStar, 70);
+
+    // 스크롤 슬라이드 업 애니메이션
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-in-section').forEach(section => {
+      observer.observe(section);
+    });
+
+    const style = document.createElement('style');
+    style.innerHTML = `@keyframes twinkle { 0% {opacity: 0.3;} 100% {opacity: 1;} }`;
+    document.head.appendChild(style);
   </script>
 </body>
 </html>
